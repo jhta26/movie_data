@@ -1,0 +1,9 @@
+@import '../node_modules/material-design-icons/iconfont/material-icons.css';
+@import '../node_modules/materialize-css/dist/css/materialize.css';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
