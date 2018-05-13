@@ -1,9 +1,27 @@
 @import '../node_modules/material-design-icons/iconfont/material-icons.css';
 @import '../node_modules/materialize-css/dist/css/materialize.css';
 
+.MovieSearchResultComponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    width: 33%;
+    padding:0;
+    margin:3px;
+}
+
+.MovieSearchResultText {
+    margin: 0;
+    width:100%;
+    text-align:center;
+    
+}
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }

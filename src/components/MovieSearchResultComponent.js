@@ -1,17 +1,20 @@
 import React from "react";
 
 const MovieSearchResultComponent = ({ info }) => {
+  if (!info || !info.poster_path || !info.original_title) {
+    return null;
+  }
+  let releaseDate = info.release_date.substring(0,4)
   return (
-    <div className="col container s12">
-      <div className="row s6">
-        <img
-          className="col center-align s1"
-          src={`http://image.tmdb.org/t/p/w92/${info.poster_path}`}
-        />
+    <div className="MovieSearchResultComponent">
+      <img
+        className="MovieSearchResultPoster"
+        src={`http://image.tmdb.org/t/p/w92/${info.poster_path}`}
+      />
 
-        <div className="col black s6">
-          <h4 className="white-text">{info.original_title}</h4>
-        </div>
+      <div className="MovieSearchResultText">
+        <h5 className="">{info.original_title}</h5>
+        <p>{releaseDate}</p>
       </div>
     </div>
   );
