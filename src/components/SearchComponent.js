@@ -53,34 +53,4 @@ export default class SearchComponent extends React.Component {
   }
 }
 
-// <div className="col">
-//      <div className="row">
 
-//                 <img
-//                src={`http://image.tmdb.org/t/p/w300/${
-//                  this.state.result.results[0].backdrop_path
-//                }`}
-//              />
-//      </div>
-//        <div class="row s12 m6">
-//          <div class="row">
-//            <div class="col card-image">
-//            <img
-//                src={`http://image.tmdb.org/t/p/w300/${
-//                  this.state.result.results[0].poster_path
-//                }`}
-//              />
-
-//              <span class="card-title">
-//                {this.state.result.results[0].original_title}
-//              </span>
-//            </div>
-//            <div class="col card-content">
-//              <p>{this.state.result.results[0].overview}</p>
-//            </div>
-//            <div class="card-action">
-//              <a href="#">This is a link</a>
-//            </div>
-//          </div>
-//        </div>
-//      </div>
