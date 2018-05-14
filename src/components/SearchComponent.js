@@ -43,7 +43,7 @@ export default class SearchComponent extends React.Component {
             </div>
           </div>
           <div className="row">
-            {this.state.result?this.state.result.map(movie=><MovieSearchResultComponent info={movie}/> ):null
+            {this.state.result?this.state.result.map((movie,i)=><MovieSearchResultComponent info={movie} key={i}/> ):null
              
             }
           </div>
