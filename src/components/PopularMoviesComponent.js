@@ -1,8 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const PopularMoviesComponent = ({popularMovies}) =>{
+const PopularMoviesComponent = ({ popularMovies }) => {
+  return (
+  	<div className="PopularMoviesComponent">
+  		{popularMovies.map((movie,i)=><MovieInfoComponent movieInfo={movie} key={i}/>)}
+  	</div>
+  	)
 
-	return(
+};
 
-		)
-}
+export default PopularMoviesComponent

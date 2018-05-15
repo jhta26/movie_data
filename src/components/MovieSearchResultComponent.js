@@ -4,7 +4,7 @@ const MovieSearchResultComponent = ({ info }) => {
   if (!info || !info.poster_path || !info.original_title) {
     return null;
   }
-  let releaseDate = info.release_date.substring(0,4)
+  let releaseDate = info.release_date.substring(0, 4);
   return (
     <div className="MovieSearchResultComponent">
       <img

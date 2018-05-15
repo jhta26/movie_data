@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import getMovieSearchInfo from "../requests/getMovieSearchInfo"
-import MovieSearchResultComponent from './MovieSearchResultComponent'
-
-
+import getMovieSearchInfo from "../requests/getMovieSearchInfo";
+import MovieSearchResultComponent from "./MovieSearchResultComponent";
 
 export default class SearchComponent extends React.Component {
   state = {
@@ -17,11 +15,11 @@ export default class SearchComponent extends React.Component {
 
   _handleClick = event => {
     event.preventDefault();
-      getMovieSearchInfo(this.state.search)
-      .then(data => this.setState({ result: data }));
+    getMovieSearchInfo(this.state.search).then(data =>
+      this.setState({ result: data })
+    );
   };
   render() {
-    
     return (
       <div className="row">
         <div className="col s12">
@@ -43,14 +41,14 @@ export default class SearchComponent extends React.Component {
             </div>
           </div>
           <div className="row">
-            {this.state.result?this.state.result.map((movie,i)=><MovieSearchResultComponent info={movie} key={i}/> ):null
-             
-            }
+            {this.state.result
+              ? this.state.result.map((movie, i) => (
+                  <MovieSearchResultComponent info={movie} key={i} />
+                ))
+              : null}
           </div>
         </div>
       </div>
     );
   }
 }
-
-
