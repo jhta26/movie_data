@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class SignUpTextInputComponent extends React.Component {
+class SignUpInputComponent extends React.Component {
   state = {
     username: "",
     password: "",
@@ -83,4 +83,4 @@ class SignUpTextInputComponent extends React.Component {
   }
 }
 
-export default SignUpTextInputComponent;
+export default SignUpInputComponent;
