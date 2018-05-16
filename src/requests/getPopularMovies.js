@@ -13,5 +13,4 @@ const GetPopularMovies = async (baseURL, id, token) => {
   }
 };
 
-
 export default GetPopularMovies;
