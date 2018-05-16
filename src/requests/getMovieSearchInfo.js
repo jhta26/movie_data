@@ -1,6 +1,6 @@
 const GetMovieSearchInfo = async (searchInput,{baseURL,id,token}) => {
   let TMDBRequest = await fetch(
-    `${baseURL}/${searchInput}`
+    `${baseURL}/movieAPI/${searchInput}`
   );
   let TMDBResponse = await TMDBRequest.json();
   let results = await TMDBResponse.results;
