@@ -1,6 +1,7 @@
 export default function rootReducer(
     currentState = {
-      movies:[],
+      searchedMovies:[],
+      popularMvoies:[],
       selectedMovie: 0,
       showMovie: false
 

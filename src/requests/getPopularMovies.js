@@ -1,10 +1,17 @@
-const getPopularMovies = async () => {
-  let TMDBRequest = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=4d5bf8d10c6b03d87d1ad39ff4d7e296&language=en-US&page=1`
-  );
-  let TMDBResponse = await TMDBRequest.json();
-  let results = await TMDBResponse.results;
-  return results;
+const GetPopularMovies = async (baseURL, id, token) => {
+  try {
+    let myInit = {
+      method: "GET",
+      mode: "cors",
+      cache: "default"
+    };
+    let TMDBRequest = await fetch(`${baseURL}/movieAPI/popular`, myInit);
+    let TMDBResponse = await TMDBRequest.json();
+    return TMDBResponse;
+  } catch (error) {
+    return "error";
+  }
 };
 
-export default getPopularMovies;
+
+export default GetPopularMovies;
