@@ -12,14 +12,57 @@
     padding:0;
     margin:3px;
 }
-
 .MovieSearchResultText {
     margin: 0;
     width:100%;
     text-align:center;
     
 }
+.PopularMovieComponent{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color:white;
+	background-color:black;
+	width: 300px;
+	margin:3px;
+	text-overflow:ellipsis;
+}
+.PopularMovieHeader{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+.PopularMoviesComponent{
+	width:100%;
+}
+.PopularMovieTitle{
+	margin:0;
+	text-align:center;
+	width:100%;
+}
+.PopularMoviePoster{
 
+}
+.PopularMoviesDisplay{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+}
+
+
+
+/*.PopularMoviesDisplay{
+	display:flex;
+	flex-direction: row;
+	
+}*/
 body {
     margin: 0;
     padding: 0;
