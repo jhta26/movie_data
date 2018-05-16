@@ -1,10 +1,18 @@
-const GetMovieSearchInfo = async (searchInput,{baseURL,id,token}) => {
-  let TMDBRequest = await fetch(
-    `${baseURL}/movieAPI/${searchInput}`
-  );
-  let TMDBResponse = await TMDBRequest.json();
-  let results = await TMDBResponse.results;
-  return results;
+const GetMovieSearchInfo = async (searchInput, baseURL, id, token) => {
+  try {
+    let myInit = {
+      method: "GET",
+      mode: "cors",
+      cache: "default"
+    };
+    let TMDBRequest = await fetch(`${baseURL}/movieAPI/${searchInput}`, myInit);
+
+    let TMDBResponse = await TMDBRequest.json();
+
+    return TMDBResponse;
+  } catch (error) {
+    return "error";
+  }
 };
 
 export default GetMovieSearchInfo;
