@@ -6,5 +6,6 @@ function loadStories() {
     require('../src/components/stories/SignUpInputComponent.story');
     require('../src/components/stories/HeaderComponent.story')
     require('../src/components/stories/PopularMoviesComponent.story')
+    require('../src/components/stories/MainHomePage.story')
 }
 configure(loadStories, module);
