@@ -7,7 +7,7 @@ const UpcomingMovieDateComponent = ({ movieDate, movieInfo }) => {
   return (
     <div className="UpcomingMovieDateComponent">
       <div className="UpcomingMovieDateHeader">
-        <h5  >{`${movieDate}`}</h5>
+        <h5>{`${movieDate}`}</h5>
       </div>
       <div className="UpcomingMovieDateMovies">
         {movieData

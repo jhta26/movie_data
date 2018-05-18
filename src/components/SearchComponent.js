@@ -3,12 +3,12 @@ import GetMovieSearchInfo from "../requests/GetMovieSearchInfo";
 import MovieSearchResultComponent from "./MovieSearchResultComponent";
 
 export default class SearchComponent extends React.Component {
-  constructor(props){
-    super(props)
-    this.state={
-        search: "",
-        result: null
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      search: "",
+      result: null
+    };
   }
 
   _handleChange = event => {
@@ -19,13 +19,12 @@ export default class SearchComponent extends React.Component {
 
   _handleClick = event => {
     event.preventDefault();
-    this.props.onSearchForMovies(this.state.search)
+    this.props.onSearchForMovies(this.state.search);
     // GetMovieSearchInfo(this.state.search,'http://localhost:8000',null,null).then(data =>
     //   this.setState({ result: data.results })
     // );
   };
   render() {
-
     return (
       <div className="row">
         <div className="col s12">

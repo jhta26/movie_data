@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieInfoComponent = ({movieInfo}) => {
+const MovieInfoComponent = ({ movieInfo }) => {
   return (
     <div className="col container s12">
       <div className="row s6">

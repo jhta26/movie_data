@@ -6,15 +6,15 @@ const PopularMoviesComponent = ({ movies }) => {
   if (!movies) return null;
 
   return (
-  	<div>
-  	<h2 className ="white-text">Popular</h2>
-    <div className="PopularMoviesDisplay">
-      {movies
-        ? movies.map((movie, i) => (
-            <PopularMovieComponent info={movie} key={i} />
-          ))
-        : null}
-    </div>
+    <div>
+      <h2 className="white-text">Popular</h2>
+      <div className="PopularMoviesDisplay">
+        {movies
+          ? movies.map((movie, i) => (
+              <PopularMovieComponent info={movie} key={i} />
+            ))
+          : null}
+      </div>
     </div>
   );
 };

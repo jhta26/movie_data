@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-const MainHomePageToolbarComponent = () =>{
-	return(
-		<div className="MainHomePageToolbarComponent">
-
-		</div>
-		)
-}
+const MainHomePageToolbarComponent = () => {
+  return <div className="MainHomePageToolbarComponent" />;
+};

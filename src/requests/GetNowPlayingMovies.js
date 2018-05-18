@@ -1,4 +1,4 @@
-const GetNowPlayingMovies = async (baseURL) => {
+const GetNowPlayingMovies = async baseURL => {
   try {
     let myInit = {
       method: "GET",
@@ -6,8 +6,8 @@ const GetNowPlayingMovies = async (baseURL) => {
       cache: "default"
     };
     let TMDBRequest = await fetch(`${baseURL}/nowplaying`, myInit);
-    let TMDBResponse = await TMDBRequest.json()
-    let results = TMDBResponse
+    let TMDBResponse = await TMDBRequest.json();
+    let results = TMDBResponse;
     return results;
   } catch (error) {
     return "error";
