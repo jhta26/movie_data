@@ -2,9 +2,8 @@ import {compose,lifecycle} from 'recompose'
 import {connect} from 'react-redux'
 import MainHomePage from '../../components/MainHomePage'
 import GetMovieSearchInfoProcess from '../thunks/GetMovieSearchInfoProcess'
-import GetPopularMoviesProcess from '../thunks/GetPopularMoviesProcess'
-import GetUpcomingAndPopularMoviesProcess from '../thunks/GetUpcomingAndPopularMoviesProcess'
-// projectInfo,onShowProject,selectedProject
+import GetMainPageMoviesProcess from '../thunks/GetMainPageMoviesProcess'
+
 function mapStateToProps(state,ownProps){
     return{...state}
 }
@@ -13,7 +12,7 @@ function mapDispatchToProps(dispatch,ownProps){
     
     return{
 
-        onMount: ()=>dispatch(GetUpcomingAndPopularMoviesProcess()),
+        onMount: ()=>dispatch(GetMainPageMoviesProcess()),
         onSearchForMovies:(searchInfo) =>GetMovieSearchInfoProcess(searchInfo),
     }
 }

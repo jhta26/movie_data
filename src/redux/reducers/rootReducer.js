@@ -3,8 +3,10 @@ export default function rootReducer(
         searchedMovies: [],
         popularMovies: [],
         upcomingMovies: [],
+        nowPlayingMovies:[],
         selectedMovie: 0,
-        showMovie: false
+        showMovie: false,
+        mainPageDisplay:''
 
     },
     action
@@ -19,7 +21,8 @@ export default function rootReducer(
             return {
                 ...currentState,
                 popularMovies: action.popularMovies,
-                upcomingMovies: action.upcomingMovies
+                upcomingMovies: action.upcomingMovies,
+                nowPlayingMovies: action.nowPlayingMovies
 
             };
         case 'GET_POPULAR_MOVIES_COMPLETED':
