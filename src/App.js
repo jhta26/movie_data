@@ -2,13 +2,25 @@
 
 import React, { Component } from "react";
 import SearchComponent from "./components/SearchComponent";
-import "./App.css";
+import MainHomePageContainer from "./redux/containers/MainHomePageContainer";
+import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import setupStore from "./redux/setupStore";
+
+const store = setupStore();
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchComponent />
+        <Provider store={store}>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={MainHomePageContainer} />
+            </Switch>
+          </Router>
+        </Provider>
       </div>
     );
   }

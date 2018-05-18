@@ -22,6 +22,13 @@ export default function rootReducer(
                 upcomingMovies: action.upcomingMovies
 
             };
+        case 'GET_POPULAR_MOVIES_COMPLETED':
+            return {
+                ...currentState,
+                popularMovies: action.popularMovies
+                
+
+            };
         case 'SELECT_MOVIE':
             return {
                 ...currentState,

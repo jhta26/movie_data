@@ -2,12 +2,12 @@ import React from "react";
 
 const HeaderComponent = () => {
   return (
-    <nav>
-      <div class="nav-wrapper container">
-        <a href="#" class="brand-logo">
+    <nav className="navigation black container m12 s12 z-depth-0">
+      <div className="nav-wrapper">
+        <a href="#" className="brand-logo">
           Martini Shot
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
             <a href="badges.html">LogIn</a>
           </li>

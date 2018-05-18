@@ -2,22 +2,16 @@ import GetPopularMovies from "../../requests/GetPopularMovies";
 import GetUpcomingMovies from '../../requests/GetUpcomingMovies'
 
 export default function GetUpcomingAndPopularMoviesProcess(searchInput) {
-  return (dispatch, getState, env) => {
-    const { userId, userToken } = getState();
-    return Promise.all([GetPopularMovies,GetUpcomingMovies]).then([popMovies,upMovies])=>{
-      dispatch({type:"GET_POP_AND_UP_MOVIES_COMPLETED",popularMovies:popMovies,upcomingMovies:upMovies})
-      return [popMovies,upMovies]
-    }
-    // return GetPopularMovies(`${env.REACT_APP_BASE_URL}`, null, null)
-    //   .then(movies => {
-    //     dispatch({
-    //       type: "GET_POPULAR_MOVIES_COMPLETED",
-    //       popularMovies: movies
-    //     });
-    //     return movies;
-    //   })
-    //   .catch(error => {
-    //     dispatch({ type: "GET_POPULAR_MOVIES_FAILED" });
-    //   });
-  };
-}
+    return (dispatch, getState, env) => {
+            
+            let popMoviesPromise = GetPopularMovies('http://localhost:8000')
+            let upMoviesPromise = GetUpcomingMovies('http://localhost:8000')
+            
+            return Promise.all([popMoviesPromise, upMoviesPromise]).then((movies) => {
+              console.log(movies,'>>>>>>>>>>>')
+                    dispatch({ type: "GET_POP_AND_UP_MOVIES_COMPLETED", popularMovies: movies[0], upcomingMovies: movies[1] })
+                    return movies
+                
+                });
+            }
+          }
