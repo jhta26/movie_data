@@ -16,7 +16,7 @@ export default function rootReducer(
         ...currentState,
         movies: action.movies
       };
-    case "GET_POP_AND_UP_MOVIES_COMPLETED":
+    case "GET_MAIN_PAGE_MOVIES_COMPLETED":
       return {
         ...currentState,
         popularMovies: action.popularMovies,

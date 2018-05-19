@@ -13,7 +13,7 @@ export default function GetMainPageMoviesProcess(searchInput) {
     ]).then(movies => {
       console.log(movies, ">>>>>>>>>>>");
       dispatch({
-        type: "GET_POP_AND_UP_MOVIES_COMPLETED",
+        type: "GET_MAIN_PAGE_MOVIES_COMPLETED",
         popularMovies: movies[0],
         upcomingMovies: movies[1],
         nowPlayingMovies: movies[2]

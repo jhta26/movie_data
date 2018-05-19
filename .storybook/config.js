@@ -7,5 +7,6 @@ function loadStories() {
     require('../src/components/stories/HeaderComponent.story')
     require('../src/components/stories/PopularMoviesComponent.story')
     require('../src/components/stories/MainHomePage.story')
+    require('../src/components/stories/MainHomePageToolbarComponent.story')
 }
 configure(loadStories, module);
