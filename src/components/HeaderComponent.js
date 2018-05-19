@@ -2,7 +2,7 @@ import React from "react";
 
 const HeaderComponent = () => {
   return (
-    <nav className="navigation red m12 s12 z-depth-0">
+    <nav className="navigation teal m12 s12 z-depth-0">
       <div className="nav-wrapper">
         <a href="#" className="brand-logo">
           Martini Shot

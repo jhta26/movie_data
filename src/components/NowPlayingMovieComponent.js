@@ -20,15 +20,15 @@ const NowPlayingMovieComponent = ({ info,onShowMovieInfo }) => {
           className="PopularMoviePoster"
           src={`http://image.tmdb.org/t/p/w92/${info.poster_path}`}
         />
-
+          <div className="PopularMovieDetails">
         <h5 className="PopularMovieTitle">{info.original_title}</h5>
-      </div>
-      <div>
         <p>{releaseDate}</p>
-        <a className="waves-effect waves-light btn" name="nowPlaying" value="nowPlaying" onClick={_handleShowMovieInfo}><Link to={"/movieinfo"} className="black-text">
+        <a className="waves-effect waves-light btn" name="nowPlaying" value="nowPlaying" onClick={_handleShowMovieInfo}><Link to={"/movieinfo"} className="black-text" >
               Data
             </Link></a>
+        </div>
       </div>
+     
     </div>
   );
 };

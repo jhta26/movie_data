@@ -24,12 +24,14 @@ const MainHomePage = ({
         {selectedCategory === "popular" ? (
           <PopularMoviesComponent
             movies={popularMovies}
+             onShowMovieInfo={onShowMovieInfo}
             
           />
         ) : null}
         {selectedCategory === "upcoming" ? (
           <UpcomingMoviesComponent
             movies={upcomingMovies}
+            onShowMovieInfo={onShowMovieInfo}
             
           />
         ) : null}

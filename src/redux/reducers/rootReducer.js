@@ -6,6 +6,7 @@ export default function rootReducer(
         nowPlayingMovies: [],
         selectedCategory: "nowPlaying",
         selectedMovie: {},
+        authenticatedUser:'',
         showMovie: false,
         mainPageDisplay: ""
     },

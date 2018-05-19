@@ -1,7 +1,7 @@
 import React from "react";
 import UpcomingMovieComponent from "./UpcomingMovieComponent";
 
-const UpcomingMovieDateComponent = ({ movieDate, movieInfo }) => {
+const UpcomingMovieDateComponent = ({ movieDate, movieInfo,onShowMovieInfo }) => {
   if (!movieInfo) return null;
   let movieData = movieInfo[0];
   return (
@@ -11,7 +11,7 @@ const UpcomingMovieDateComponent = ({ movieDate, movieInfo }) => {
       </div>
       <div className="UpcomingMovieDateMovies">
         {movieData
-          ? movieData.map(movie => <UpcomingMovieComponent info={movie} />)
+          ? movieData.map(movie => <UpcomingMovieComponent info={movie} onShowMovieInfo={onShowMovieInfo} />)
           : null}
       </div>
     </div>

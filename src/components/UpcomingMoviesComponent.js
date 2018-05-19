@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import GetPopularMovies from "../requests/GetPopularMovies";
 import UpcomingMovieDateComponent from "./UpcomingMovieDateComponent";
-const UpcomingMoviesComponent = ({ movies, selectedCategory }) => {
+const UpcomingMoviesComponent = ({ movies, selectedCategory,onShowMovieInfo }) => {
   if (!movies) return null;
   movies.map(
     movie =>
@@ -39,6 +39,7 @@ const UpcomingMoviesComponent = ({ movies, selectedCategory }) => {
                 movieDate={Object.keys(movie)[0]}
                 movieInfo={Object.values(movie)}
                 key={i}
+                onShowMovieInfo={onShowMovieInfo}
               />
             ))
           : null}

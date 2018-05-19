@@ -16,21 +16,23 @@ const MovieInfoComponent = ({ selectedMovie }) => {
           <h2 className="white-text">
             {selectedMovie.original_title}
           </h2>
+          <h5 className="white-text">Release Date</h5>
           <p className="white-text">
-            release date:{selectedMovie.release_date}
+            {selectedMovie.release_date}
           </p>
-          <h5 className="white-text">
-            overview:{selectedMovie.overview}
-          </h5>
+          <h5 className="white-text">Overview</h5>
           <p className="white-text">
-            popularity:{selectedMovie.popularity}
+            {selectedMovie.overview}
           </p>
+          <h5 className="white-text">Popularity</h5>
           <p className="white-text">
-            vote average:{selectedMovie.vote_average}
+            {selectedMovie.popularity}
           </p>
+          <h5 className="white-text">Vote Average</h5>
           <p className="white-text">
-            vote count:{selectedMovie.vote_count}
+            {selectedMovie.vote_average}
           </p>
+        
         </div>
         <div className ="col black s1">
         <Link to={"/"} className="white-text">
