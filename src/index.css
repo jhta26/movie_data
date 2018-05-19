@@ -137,7 +137,9 @@
 	border-bottom:teal 3px solid;
 
 }
-
+.MovieInfoComponent{
+	height:100%;
+}
 
 /*.PopularMoviesDisplay{
 	display:flex;

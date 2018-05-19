@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 const MovieInfoComponent = ({ selectedMovie }) => {
 
   return (
-    <div className="col container s12">
+    <div className="MovieInfoComponent col black s12">
       <div className="row s6">
         <img
           className="col center-align s6"
