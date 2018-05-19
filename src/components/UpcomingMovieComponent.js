@@ -1,7 +1,6 @@
 import React from "react";
 
 const UpcomingMovieComponent = ({ info }) => {
-  console.log(info);
   if (!info || !info.poster_path || !info.original_title) {
     return null;
   }

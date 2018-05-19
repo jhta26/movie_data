@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import GetPopularMovies from "../requests/GetPopularMovies";
 import UpcomingMovieDateComponent from "./UpcomingMovieDateComponent";
-const UpcomingMoviesComponent = ({ movies }) => {
+const UpcomingMoviesComponent = ({ movies, selectedCategory }) => {
   if (!movies) return null;
-
   movies.map(
     movie =>
       (movie.release = +movie.release_date
@@ -22,7 +21,7 @@ const UpcomingMoviesComponent = ({ movies }) => {
       sortedMoviesObj[sortedMovies[i].release_date].push(sortedMovies[i]);
     }
   }
-  console.log(sortedMoviesObj);
+
   var result = [];
   for (let i in sortedMoviesObj) {
     var obj = new Object();
@@ -32,7 +31,7 @@ const UpcomingMoviesComponent = ({ movies }) => {
 
   return (
     <div>
-      <h2 className="white-text">Upcoming</h2>
+      <h5 className="white-text">Upcoming</h5>
       <div className="UpcomingMoviesDisplay">
         {result
           ? result.map((movie, i) => (

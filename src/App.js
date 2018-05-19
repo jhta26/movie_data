@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import SearchComponent from "./components/SearchComponent";
+import MovieInfoComponentContainer from "./redux/containers/MovieInfoComponentContainer"
 import MainHomePageContainer from "./redux/containers/MainHomePageContainer";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -18,6 +19,7 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path="/" component={MainHomePageContainer} />
+              <Route exact path="/movieinfo" component={MovieInfoComponentContainer}/>
             </Switch>
           </Router>
         </Provider>

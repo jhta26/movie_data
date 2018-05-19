@@ -1,37 +1,44 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
-const MovieInfoComponent = ({ movieInfo }) => {
+const MovieInfoComponent = ({ selectedMovie }) => {
+
   return (
     <div className="col container s12">
       <div className="row s6">
         <img
           className="col center-align s6"
-          src={`http://image.tmdb.org/t/p/w300/${
-            this.state.result.results[0].poster_path
-          }`}
+          src={`http://image.tmdb.org/t/p/w300/${selectedMovie.poster_path}`
+          }
         />
 
-        <div className="col black s6">
+        <div className="col black s5">
           <h2 className="white-text">
-            {this.state.result.results[0].original_title}
+            {selectedMovie.original_title}
           </h2>
           <p className="white-text">
-            release date:{this.state.result.results[0].release_date}
+            release date:{selectedMovie.release_date}
           </p>
           <h5 className="white-text">
-            {this.state.result.results[0].overview}
+            overview:{selectedMovie.overview}
           </h5>
           <p className="white-text">
-            {this.state.result.results[0].popularity}
+            popularity:{selectedMovie.popularity}
           </p>
           <p className="white-text">
-            {this.state.result.results[0].vote_average}
+            vote average:{selectedMovie.vote_average}
           </p>
           <p className="white-text">
-            {this.state.result.results[0].vote_count}
+            vote count:{selectedMovie.vote_count}
           </p>
+        </div>
+        <div className ="col black s1">
+        <Link to={"/"} className="white-text">
+              Back
+            </Link>
         </div>
       </div>
     </div>
   );
 };
+export default MovieInfoComponent

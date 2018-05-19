@@ -3,18 +3,43 @@ import PageLayout from "./PageLayout";
 import HeaderComponent from "./HeaderComponent";
 import PopularMoviesComponent from "./PopularMoviesComponent";
 import UpcomingMoviesComponent from "./UpcomingMoviesComponent";
-import MainHomePageToolbarComponent from "./MainHomePageToolbarComponent"
+import MainHomePageToolbarComponent from "./MainHomePageToolbarComponent";
+import NowPlayingMoviesComponent from "./NowPlayingMoviesComponent";
 
-const MainHomePage = ({ popularMovies, upcomingMovies, nowPlayingMovies }) => {
-  console.log(popularMovies);
+const MainHomePage = ({
+  popularMovies,
+  upcomingMovies,
+  nowPlayingMovies,
+  onShowCategory,
+  selectedCategory,
+  onShowMovieInfo
+}) => {
+  if (!selectedCategory) return null;
 
   return (
     <div className="MainHomePage black">
       <PageLayout>
         <HeaderComponent />
-        <MainHomePageToolbarComponent/>
-        <UpcomingMoviesComponent movies={upcomingMovies} />
-        <PopularMoviesComponent movies={popularMovies} />
+        <MainHomePageToolbarComponent onShowCategory={onShowCategory} />
+        {selectedCategory === "popular" ? (
+          <PopularMoviesComponent
+            movies={popularMovies}
+            
+          />
+        ) : null}
+        {selectedCategory === "upcoming" ? (
+          <UpcomingMoviesComponent
+            movies={upcomingMovies}
+            
+          />
+        ) : null}
+        {selectedCategory === "nowPlaying" ? (
+          <NowPlayingMoviesComponent
+            movies={nowPlayingMovies}
+           
+            onShowMovieInfo={onShowMovieInfo}
+          />
+        ) : null}
       </PageLayout>
     </div>
   );
