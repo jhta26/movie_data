@@ -2,23 +2,21 @@ import { compose, lifecycle } from "recompose";
 import { connect } from "react-redux";
 import MovieInfoComponent from "../../components/MovieInfoComponent";
 
-
 function mapStateToProps(state, ownProps) {
-    return { ...state };
+  return { ...state };
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
-    return {
-        // onMount: () => ()),
-     
-    }
+  return {
+    // onMount: () => ()),
+  };
 }
-    const connectToStore = connect(mapStateToProps, mapDispatchToProps);
+const connectToStore = connect(mapStateToProps, mapDispatchToProps);
 
-    // const onDidMount = lifecycle({
-    //     componentDidMount() {
-    //         this.props.onMount();
-    //     }
-    // });
+// const onDidMount = lifecycle({
+//     componentDidMount() {
+//         this.props.onMount();
+//     }
+// });
 
-    export default compose(connectToStore)(MovieInfoComponent);
+export default compose(connectToStore)(MovieInfoComponent);

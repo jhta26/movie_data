@@ -2,153 +2,156 @@
 @import "../node_modules/materialize-css/dist/css/materialize.css";
 
 .MovieSearchResultComponent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background-color: black;
-    width: 33%;
-    padding: 0;
-    margin: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: black;
+  width: 33%;
+  padding: 0;
+  margin: 3px;
 }
 
 .MovieSearchResultText {
-    margin: 0;
-    width: 100%;
-    text-align: center;
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .PopularMovieComponent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    background-color: black;
-    width: 300px;
-    margin: 5px;
-    text-overflow: ellipsis;
-    border:teal 3px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: black;
+  width: 300px;
+  margin: 5px;
+  text-overflow: ellipsis;
+  border: teal 3px solid;
 }
 
 .PopularMovieHeader {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background-color: black;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: black;
+  width: 100%;
 }
 
 .PopularMoviesComponent {
-    width: 100%;
+  width: 100%;
 }
 
 .PopularMovieTitle {
-    margin: 0;
-    text-align: center;
-    width: 100%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
 }
-.PopularMovieDetails{
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-    text-align: center;
-    width: 100%;
-    align-items: space-between;
+.PopularMovieDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  align-items: space-between;
 }
 
 .PopularMoviePoster {
-	border-right:teal 3px solid;
+  border-right: teal 3px solid;
 }
 
 .PopularMoviesDisplay {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .UpcomingMovieComponent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    background-color: gray;
-    width: 300px;
-    margin: 3px;
-    text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: gray;
+  width: 300px;
+  margin: 3px;
+  text-overflow: ellipsis;
 }
 
 .UpcomingMovieHeader {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background-color: gray;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: gray;
+  width: 100%;
 }
 
 .UpcomingMoviesComponent {
-    width: 100%;
+  width: 100%;
 }
 
 .UpcomingMovieTitle {
-    margin: 0;
-    text-align: center;
-    width: 100%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
 }
 
-.UpcomingMoviePoster {}
+.UpcomingMoviePoster {
+}
 
 .UpcomingMoviesDisplay {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
 
 .UpcomingMovieDateComponent {
-    background-color: white;
-    display: flex;
-    flex-flow: row wrap;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .UpcomingMovieDateHeader {
-    width: 15%;
-    color: white;
-    background-color: black;
+  width: 15%;
+  color: white;
+  background-color: black;
 }
 
 .UpcomingMovieDateMovies {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-flow: row wrap;
-    width: 85%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  width: 85%;
 }
 
 .MainHomePageToolbarComponent {
-	display:flex;
-	flex-direction: row;
-	justify-content: space-around;
-	border-bottom:teal 3px solid;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: teal 3px solid;
 }
-.MovieInfoComponent{
-	height:100%;
+.MovieInfoComponent {
+  height: 100%;
+}
+.MovieInfoPoster {
+  
 }
 
 /*.PopularMoviesDisplay{
 	display:flex;
 	flex-direction: row;
-	
+
 }*/
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }

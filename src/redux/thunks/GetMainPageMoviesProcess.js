@@ -1,6 +1,7 @@
 import GetPopularMovies from "../../requests/GetPopularMovies";
 import GetUpcomingMovies from "../../requests/GetUpcomingMovies";
 import GetNowPlayingMovies from "../../requests/GetNowPlayingMovies";
+
 export default function GetMainPageMoviesProcess(searchInput) {
   return (dispatch, getState, env) => {
     let popMoviesPromise = GetPopularMovies("http://localhost:8000");

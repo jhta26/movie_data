@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import GetPopularMovies from "../requests/GetPopularMovies";
 import PopularMovieComponent from "./PopularMovieComponent";
 
-const PopularMoviesComponent = ({ movies, selectedCategory }) => {
+const PopularMoviesComponent = ({
+  movies,
+  selectedCategory,
+  onShowMovieInfo
+}) => {
   if (!movies) return null;
   return (
     <div>
@@ -11,7 +15,11 @@ const PopularMoviesComponent = ({ movies, selectedCategory }) => {
         <div className="PopularMoviesDisplay">
           {movies
             ? movies.map((movie, i) => (
-                <PopularMovieComponent info={movie} key={i} />
+                <PopularMovieComponent
+                  info={movie}
+                  key={i}
+                  onShowMovieInfo={onShowMovieInfo}
+                />
               ))
             : null}
         </div>
